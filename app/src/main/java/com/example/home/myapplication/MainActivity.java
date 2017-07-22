@@ -55,8 +55,7 @@ public class MainActivity extends Activity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Playing
-                        sound",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Playing sound",Toast.LENGTH_SHORT).show();
                         mediaPlayer.start();
 
                 finalTime = mediaPlayer.getDuration();
@@ -91,8 +90,7 @@ public class MainActivity extends Activity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Pausing
-                        sound",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Pausing sound",Toast.LENGTH_SHORT).show();
                         mediaPlayer.pause();
                 b2.setEnabled(false);
                 b3.setEnabled(true);
@@ -107,11 +105,9 @@ public class MainActivity extends Activity {
                 if((temp+forwardTime)<=finalTime){
                     startTime = startTime + forwardTime;
                     mediaPlayer.seekTo((int) startTime);
-                    Toast.makeText(getApplicationContext(),"You have Jumped forward 5
-                            seconds",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"You have Jumped forward 5 seconds",Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(getApplicationContext(),"Cannot jump forward 5
-                            seconds",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Cannot jump forward 5 seconds",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -124,11 +120,9 @@ public class MainActivity extends Activity {
                 if((temp-backwardTime)>0){
                     startTime = startTime - backwardTime;
                     mediaPlayer.seekTo((int) startTime);
-                    Toast.makeText(getApplicationContext(),"You have Jumped backward 5
-                            seconds",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"You have Jumped backward 5 seconds",Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(getApplicationContext(),"Cannot jump backward 5
-                            seconds",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Cannot jump backward 5 seconds",Toast.LENGTH_SHORT).show();
                 }
             }
         });
